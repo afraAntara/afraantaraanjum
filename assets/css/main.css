@@ -3907,3 +3907,65 @@ input, select, textarea {
 			}
 
 		}
+
+
+/* Topbar */
+#topbar {
+    position: fixed; /* Keep the topbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #312450; /* Match the sidebar's background color */
+    z-index: 10000; /* Ensure it's above other content */
+    padding: 1em 2em;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    text-align: center;
+}
+
+#topbar .inner {
+    display: flex;
+    justify-content: space-around; /* Even spacing for navigation items */
+    align-items: center;
+}
+
+#topbar nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#topbar nav ul li {
+    margin: 0 15px; /* Space between links */
+}
+
+#topbar nav ul li a {
+    color: rgba(255, 255, 255, 0.75); /* Text color */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    transition: color 0.3s ease;
+}
+
+#topbar nav ul li a:hover {
+    color: #f39c12; /* Hover color */
+}
+
+body {
+    padding-top: 4em; /* Add padding so content doesn’t hide behind the fixed topbar */
+}
+
+@media screen and (max-width: 736px) {
+    #topbar .inner {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    #topbar nav ul {
+        flex-direction: column;
+    }
+
+    #topbar nav ul li {
+        margin: 10px 0;
+    }
+}

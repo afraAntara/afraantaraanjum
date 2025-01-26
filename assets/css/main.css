@@ -3969,16 +3969,6 @@ body {
         margin: 10px 0;
     }
 }
-.image.right-aligned {
-    display: block; /* Ensures it behaves as a block element */
-    float: right; /* Aligns the element to the right */
-    margin-left: 20px; /* Adds spacing between the image and text */
-    max-width: 50%; /* Ensures the image doesn’t take too much space */
-}
 
-.image.right-aligned img {
-    width: 100%; /* Makes the image responsive */
-    height: auto; /* Preserves the aspect ratio */
-}
 
 

@@ -187,27 +187,27 @@
 				}
 			});
 	// Hide/show topbar on scroll
-		let lastScrollTop = 0;
-		let $topbar = $('#topbar');
-		
-		if ($topbar.length > 0) {
-			const topbarHeight = $topbar.outerHeight();
-		
-			$window.on('scroll', function () {
-				let currentScroll = $(this).scrollTop();
-		
-				if (currentScroll > lastScrollTop) {
-					// Scrolling down - hide
-					$topbar.css('top', `-${topbarHeight}px`);
-				} else {
-					// Scrolling up - show
-					$topbar.css('top', '0');
-				}
-		
-				lastScrollTop = currentScroll;
-			});
-		}
 
-
-
+		    let lastScrollTop = 0;
+		    const $topbar = $('#topbar');
+		
+		    if ($topbar.length) {
+		        const topbarHeight = $topbar.outerHeight();
+		
+		        $(window).on('scroll', function () {
+		            const currentScroll = $(this).scrollTop();
+		
+		            if (currentScroll > lastScrollTop + 10) {
+		                // Scrolling down
+		                $topbar.css('top', `-${topbarHeight}px`);
+		            } else if (currentScroll < lastScrollTop - 10) {
+		                // Scrolling up
+		                $topbar.css('top', '0');
+		            }
+		
+		            lastScrollTop = currentScroll;
+		        });
+    }
 })(jQuery);
+
+

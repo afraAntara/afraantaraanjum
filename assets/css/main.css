@@ -3911,7 +3911,7 @@ input, select, textarea {
 
 /* Topbar */
 #topbar {
-    position: fixed; /* Keep the topbar fixed at the top */
+    position: relative; /* The topbar is not fixed at the top */
     top: 0;
     left: 0;
     width: 100%;
@@ -3952,9 +3952,9 @@ input, select, textarea {
     color: #f39c12; /* Hover color */
 }
 
-body {
+/* body {
     padding-top: 4em; /* Add padding so content doesn’t hide behind the fixed topbar */
-}
+} */
 
 @media screen and (max-width: 736px) {
     #topbar .inner {

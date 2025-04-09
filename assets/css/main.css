@@ -3941,7 +3941,8 @@ input, select, textarea {
 
 #topbar nav ul li a {
     color: rgba(255, 255, 255, 0.75); /* Text color */
-    text-decoration: none;
+    text-decoration: none !important;
+    border-bottom: none !important;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.8em;

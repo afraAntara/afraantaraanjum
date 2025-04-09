@@ -186,5 +186,25 @@
 
 				}
 			});
+	// Hide/show topbar on scroll
+		let lastScrollTop = 0;
+		let $topbar = $('#topbar');
+		
+		if ($topbar.length > 0) {
+			$window.on('scroll', function () {
+				let currentScroll = $(this).scrollTop();
+		
+				if (currentScroll > lastScrollTop) {
+					// Scrolling down
+					$topbar.css('top', '-100px');
+				} else {
+					// Scrolling up
+					$topbar.css('top', '0');
+				}
+		
+				lastScrollTop = currentScroll;
+			});
+		}
+
 
 })(jQuery);

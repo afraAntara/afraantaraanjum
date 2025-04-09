@@ -191,20 +191,23 @@
 		let $topbar = $('#topbar');
 		
 		if ($topbar.length > 0) {
+			const topbarHeight = $topbar.outerHeight();
+		
 			$window.on('scroll', function () {
 				let currentScroll = $(this).scrollTop();
 		
 				if (currentScroll > lastScrollTop) {
-					// Scrolling down
-					$topbar.css('top', '-100px');
+					// Scrolling down - hide
+					$topbar.css('top', `-${topbarHeight}px`);
 				} else {
-					// Scrolling up
+					// Scrolling up - show
 					$topbar.css('top', '0');
 				}
 		
 				lastScrollTop = currentScroll;
 			});
 		}
+
 
 
 })(jQuery);
